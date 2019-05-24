@@ -16,7 +16,7 @@ public class KeypadScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(code.text);
+        //Debug.Log(code.text);
         if(code.text == "1734" && Input.GetKey(KeyCode.Return)) {
             panel.SetActive(false);
             Application.LoadLevel("End");
@@ -28,5 +28,9 @@ public class KeypadScript : MonoBehaviour
             panel.SetActive(true);
             
         }
+    }
+    public void CloseKeyPad()
+    {
+        panel.SetActive(false);
     }
 }
